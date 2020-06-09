@@ -7,12 +7,10 @@ Open and Load
     Set Browser Implicit Wait  5
     Click ELement  css=a.introjs-button:nth-child(1)
 Verify That Page Loaded
-    Set Browser Implicit Wait  5
     Page Should Contain  Быстрая доставка
 Choose Language Settings
     Click Element  css=.new_header_top_block_lang > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)
 Verify That Language Settings Changed
-    Set Browser Implicit Wait  5
     Page Should Contain  Fast delivery
 Sort By Rating
     Wait Until page Contains Element  css=#sortingItems > label:nth-child(8) > a:nth-child(2)
@@ -25,7 +23,7 @@ Choose Adress To Delivery
     Input Text  css=#new_header_address_search  ${ADRESS_TO_DELIVERY}
     Click Element  css=#new_address_form_delivery
 Choose Adress To Delivery In The Map
-    wait Until Page Contains Element  css=#new_header_address_search
+    Wait Until Page Contains Element  css=#new_header_address_search
     Click Element  css=#open_new_popup_map
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
     Input Text  css=#new_header_address_search_under_map  ${ADRESS_TO_DELIVERY}
@@ -95,7 +93,7 @@ Add Product To The Cart
     User Choose Size Of The Portion
     User Choose Number Of Portion
     User Add Product To The Cart
-Confirme Order
+Confirm Order
     Wait Until Page Contains Element  css=.order
     Click Element  css=.order
     Wait Until Page Contains Element  css=#use_social_login
