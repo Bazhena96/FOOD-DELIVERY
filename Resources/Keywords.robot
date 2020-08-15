@@ -1,7 +1,7 @@
-***Settings***
+*** Settings ***
 Library  SeleniumLibrary
 Resource  Variables.robot
-***Keywords***
+*** Keywords ***
 Open and Load
     Open Browser  https://www.menu.by  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver
     Set Browser Implicit Wait  5
@@ -20,33 +20,33 @@ Choose The Cuisine
     Click Element  css=div.left-column:nth-child(2) > div:nth-child(3) > label:nth-child(72) > a:nth-child(2)
 Choose Adress To Delivery
     Wait Until Page Contains Element  css=#new_header_address_search
-    Input Text  css=#new_header_address_search  ${ADRESS_TO_DELIVERY}
+    Input Text  css=#new_header_address_search  ${user address}
     Click Element  css=#new_address_form_delivery
 Choose Adress To Delivery In The Map
     Wait Until Page Contains Element  css=#new_header_address_search
     Click Element  css=#open_new_popup_map
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
-    Input Text  css=#new_header_address_search_under_map  ${ADRESS_TO_DELIVERY}
+    Input Text  css=#new_header_address_search_under_map  ${user address}
     Click Element  css=#map_set_address_button
 Verify That Adress To Delivery Added
     Wait Until Page Contains Element  css=.first
     Page Should Contain Element  css=.first
 Search The Dish
-    [Arguments]  ${DISH}
+    [Arguments]  ${dish}
     Wait Until Page Contains Element  css=.left_block_seach_form_input
     Click element  css=.left_block_seach_form_input
-    Input Text  css=.left_block_seach_form_input  ${DISH}
+    Input Text  css=.left_block_seach_form_input  ${dish}
     Click Element  css=.left_block_seach_form_input_submit
 Search The Restaraunt
-    [Arguments]  ${RESTARAUNT}
+    [Arguments]  ${restaraunt}
     Wait Until Page Contains Element  css=.left_block_seach_form_input
     Click element  css=.left_block_seach_form_input
-    Input Text  css=.left_block_seach_form_input  ${RESTARAUNT}
+    Input Text  css=.left_block_seach_form_input  ${restaraunt}
     Click Element  css=.left_block_seach_form_input_submit
 Verify That Search Completed
-    [Arguments]  ${SEARCH_TERM}
-    Wait Until Page Contains Element  ${SEARCH_TERM}
-    Page Should Contain Element  ${SEARCH_TERM}
+    [Arguments]  ${search term}
+    Wait Until Page Contains Element  ${search term}
+    Page Should Contain Element  ${search term}
 User Choose The Restaraunt
     [Documentation]  Restaraunt: Pizza Lisitca
     Wait Until page Contains Element  css=div.item:nth-child(1) > div:nth-child(3) > a:nth-child(1)
@@ -59,7 +59,7 @@ User Choose the Product
 User Confirm Adress To Delivery
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
     Click Element  css=#new_header_address_search_under_map
-    Input Text  css=#new_header_address_search_under_map  ${ADRESS_TO_DELIVERY}
+    Input Text  css=#new_header_address_search_under_map  ${user address}
     Click Element  css=#map_set_address_button
 User Choose The Additinal Items
     [Documentation]  Additional items: barbecue souce,teriyaki souce.
@@ -111,20 +111,20 @@ Create Account
     Wait Until Page Contains Element  css=.__registration
     Click Element  css=.__registration
     Wait Until Page Contains Element  css=#fullname
-    Input Text  css=#fullname  ${USER_NAME}
-    Input Text  css=#address  ${ADRESS_TO_DELIVERY}
-    Input Text  css=#phone  ${USER_PHONE}
-    Input Text  css=#email  ${USER_EMAIL}
-    Input Text  css=#password  ${USER_PASSWORD}
-    Input Text  css=#conf_password  ${USER_PASSWORD}
+    Input Text  css=#fullname  ${user name}
+    Input Text  css=#address  ${user address}
+    Input Text  css=#phone  ${phone number}
+    Input Text  css=#email  ${user email}
+    Input Text  css=#password  ${user password}
+    Input Text  css=#conf_password  ${user password}
     Click Element  css=#submitOrder
 Sign In
     Wait Until Page Contains Element  css=.new_header_islogined
     Click Element  css=.new_header_islogined
     Wait Until Page Contains Element  css=#user_email
-    Input Text  css=#user_email  ${USER_EMAIL}
+    Input Text  css=#user_email  ${user email}
     Wait Until Page Contains Element  css=#user_password
-    Input Text  css=#user_password  ${USER_PASSWORD}
+    Input Text  css=#user_password  ${user password}
     Wait Until Page Contains Element  css=#submit
     Click Element  css=#submit
 Sign Out
