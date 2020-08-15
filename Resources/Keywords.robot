@@ -12,6 +12,10 @@ Load Page And Maximize Browser Window
     Open and Load
     Verify That Page Loaded
     Load Page And Maximize Browser Window
+Wait And Click
+    [Arguments]  ${locator}
+    Wait Until Page Contains Element  ${locator}
+    Click Element  ${locator}
 Choose Language Settings
     Click Element  css=.new_header_top_block_lang > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)
 Verify That Language Settings Changed
