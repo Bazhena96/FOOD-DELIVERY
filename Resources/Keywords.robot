@@ -88,7 +88,7 @@ Add Product To The Cart
     User Choose Size Of The Portion
     User Choose Number Of Portion
     User Add Product To The Cart
-Confirm  Order
+Confirm Order
     Wait And Click  css=.order
     Wait And Click  css=#use_social_login
 Delite Order
