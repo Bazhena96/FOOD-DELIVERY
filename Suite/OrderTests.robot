@@ -7,41 +7,41 @@ User sort product by rating
     Load Page And Maximize Browser Window
     Sort By Rating
     Close Browser
-User Choose The Cuisine
+User choose the cuisine
     [Documentation]  User choose thai cuisine.
     Load Page And Maximize Browser Window
     Choose The Cuisine
     Close Browser
-User Search The Dish
+User search the dish
     Load Page And Maximize Browser Window
     Search The Dish  burger
     Verify That Search Completed  css=.filter-status-block > a:nth-child(1)
     Close Browser
-Userch Search The Restaurant
+Userch search the restaurant
     Load Page And Maximize Browser Window
     Search The Restaraunt  Paul
     Verify That Search Completed  css=.filter-status-block > a:nth-child(1)
     Close browser
-User Add Product To The Cart
+User add product to the cart
     Load Page And Maximize Browser Window
     Add Product To The Cart
     Close Browser
-Check The Product In The Cart
+Check the product in the cart
     Load Page And Maximize Browser Window
     Add Product To The Cart
     Check The Cart 
     Close Browser
-User Confirme Order
+User confirm order
     Load Page And Maximize Browser Window
     Add Product To The Cart
     Confirme Order
     Close Browser
-User Delite Order From The Cart
+User delite order from the cart
     Load Page And Maximize Browser Window
     Add Product To The Cart
     Delite Order
     Close Browser
-User Add Restourant To Favorite
+User add restourant to favorite
     Load Page And Maximize Browser Window
     Add To Favorite
     Close Browser
