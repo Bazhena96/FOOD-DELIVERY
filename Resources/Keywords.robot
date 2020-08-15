@@ -1,6 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  Variables.robot
+Resource  FancyboxTests.robot
+
 *** Keywords ***
 Open and Load
     Open Browser  https://www.menu.by  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver
@@ -10,6 +12,7 @@ Verify That Page Loaded
     Page Should Contain  Быстрая доставка
 Load Page And Maximize Browser Window
     Open and Load
+    Close information window
     Verify That Page Loaded
     Load Page And Maximize Browser Window
 Wait And Click
