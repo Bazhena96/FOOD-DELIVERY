@@ -34,7 +34,7 @@ Check the product in the cart
 User confirm order
     Load Page And Maximize Browser Window
     Add Product To The Cart
-    Confirme Order
+    Confirm Order
     Close Browser
 User delite order from the cart
     Load Page And Maximize Browser Window
