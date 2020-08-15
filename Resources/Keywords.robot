@@ -8,6 +8,10 @@ Open and Load
     Click ELement  css=a.introjs-button:nth-child(1)
 Verify That Page Loaded
     Page Should Contain  Быстрая доставка
+Load Page And Maximize Browser Window
+    Open and Load
+    Verify That Page Loaded
+    Load Page And Maximize Browser Window
 Choose Language Settings
     Click Element  css=.new_header_top_block_lang > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)
 Verify That Language Settings Changed
