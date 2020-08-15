@@ -8,7 +8,7 @@ Verify that page loaded
     Close Browser
 User choose the language settings
     Load Page And Maximize Browser Window
-    Choose Language Settings
+    Choose The Language Settings
     Verify That Language Settings Changed
     Close Browser
 User create account
