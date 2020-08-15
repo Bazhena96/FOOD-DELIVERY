@@ -16,7 +16,7 @@ Wait And Click
     [Arguments]  ${locator}
     Wait Until Page Contains Element  ${locator}
     Click Element  ${locator}
-Choose Language Settings
+Choose The Language Settings
     Wait And Click  css=.new_header_top_block_lang > ul:nth-child(1) > li:nth-child(3) > a:nth-child(1)
 Verify That Language Settings Changed
     Page Should Contain  Fast delivery
@@ -68,7 +68,7 @@ User Choose The Additinal Items
 User Choose Size Of The Portion
     [Documentation]  Size:32
     Wait And Click  css=label.option_row:nth-child(11)
-User Choose Number Of Portion
+User Choose Number Of The Portion
     [Documentation]  Number of portion:2
     Wait Until Page Contains Element  css=.options_count
     Wait And Click  css=.ui-icon-triangle-1-n
@@ -88,7 +88,7 @@ Add Product To The Cart
     User Choose Size Of The Portion
     User Choose Number Of Portion
     User Add Product To The Cart
-Confirm Order
+Confirm  Order
     Wait And Click  css=.order
     Wait And Click  css=#use_social_login
 Delite Order
