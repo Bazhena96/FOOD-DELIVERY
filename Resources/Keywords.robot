@@ -78,9 +78,8 @@ User Choose Number Of The Portion
 User Add Product To The Cart
     Wait And Click  css=#opts-save
 Check The Cart 
-    Scroll Element Into View  css=#total-products-count
-    Wait And Click  css=#total-products-count
-    Wait And Click  css=.rest-title
+    Scroll Element Into View  css=#shopping-cart-icon
+    Wait Until Page Contains Element  css=#mainCntent > div > div.page-container > div > input
 Add Product To The Cart
     User Choose The Restaraunt
     User Choose the Product
@@ -92,8 +91,8 @@ Add Product To The Cart
     User Choose Number Of The Portion
     User Add Product To The Cart
 Confirm Order
-    Wait And Click  css=.order
-    Wait And Click  css=#use_social_login
+    Wait And Click  css=#order_block_sidebar > input
+    Wait Until Page Contains Element  css=#switchQuickForm
 Delite Order
     Wait And Click  css=#total-products-count
     Wait And Click  css=#closeBasket
