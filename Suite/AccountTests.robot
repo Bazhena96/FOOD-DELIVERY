@@ -31,6 +31,6 @@ User choose adress to delivery
     Close Browser
 User choose adress to delivery in the map
     Load Page And Maximize Browser Window
-    Choose Adress To Delivery In The Map
+    Choose Adress To Delivery In The Map  Беларусь, Минск, проспект Независимости, 58
     Verify That Adress To Delivery Added
     Close Browser
