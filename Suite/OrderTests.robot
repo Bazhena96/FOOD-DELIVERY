@@ -22,14 +22,10 @@ Userch search the restaurant
     Search The Restaraunt  Paul
     Verify That Search Completed  css=.filter-status-block > a:nth-child(1)
     Close browser
-User add product to the cart
+User add and check product to the cart
     Load Page And Maximize Browser Window
     Add Product To The Cart
-    Close Browser
-Check the product in the cart
-    Load Page And Maximize Browser Window
-    Add Product To The Cart
-    Check The Cart 
+    Check The Cart
     Close Browser
 User confirm order
     Load Page And Maximize Browser Window
