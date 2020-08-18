@@ -1,6 +1,5 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  Variables.robot
 *** Keywords ***
 Open and Load
     Open Browser  https://www.menu.by  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver
