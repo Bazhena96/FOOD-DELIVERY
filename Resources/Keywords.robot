@@ -57,6 +57,7 @@ User Choose the Product
     Scroll Element Into View  css=#highligh_115974 > div:nth-child(3) > a:nth-child(1) > img:nth-child(1)
     Wait And Click  css=#highligh_115974 > div:nth-child(3) > a:nth-child(1) > img:nth-child(1)
 User Confirm Adress To Delivery
+    [Arguments]  ${user address}
     Wait And Click  css=#new_header_address_search_under_map
     Input Text  css=#new_header_address_search_under_map  ${user address}
     Wait And Click  css=#map_set_address_button
@@ -96,6 +97,7 @@ Delite Order
     Wait And Click  css=#closeBasket
     Wait Until Page Contains  Your cart is empty
 Create Account
+    [Arguments]  ${user name}  ${user address}  ${phone number}  ${user email}  ${user password}
     Wait And Click  css=.new_header_top_block_reg_login
     Wait And Click  css=.__registration
     Wait Until Page Contains Element  css=#fullname
@@ -107,6 +109,7 @@ Create Account
     Input Text  css=#conf_password  ${user password}
     Wait And Click  css=#submitOrder
 Sign In
+    [Arguments]  ${user email}  ${user password}
     Wait And Click  css=.new_header_islogined
     Wait Until Page Contains Element  css=#user_email
     Input Text  css=#user_email  ${user email}
