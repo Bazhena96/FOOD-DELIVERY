@@ -4,7 +4,8 @@ Library  SeleniumLibrary
 Open and Load
     Open Browser  https://www.menu.by  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver
     Set Browser Implicit Wait  5
-    Click ELement  css=a.introjs-button:nth-child(1)
+    Click Element  css=a.introjs-button:nth-child(1)
+    Wait And Click  css=body > div.req_notif_perm_main_block > div > div.fr > div.block_btn > button.block_btn_cancel.fr
 Verify That Page Loaded
     Page Should Contain  Быстрая доставка
 Load Page And Maximize Browser Window
@@ -24,10 +25,12 @@ Sort By Rating
 Choose The Cuisine
     Wait And Click   css=div.left-column:nth-child(2) > div:nth-child(3) > label:nth-child(72) > a:nth-child(2)
 Choose Adress To Delivery
+    [Arguments]  ${user address}
     Wait Until Page Contains Element  css=#new_header_address_search
     Input Text  css=#new_header_address_search  ${user address}
     Click Element  css=#new_address_form_delivery
 Choose Adress To Delivery In The Map
+    [Arguments]  ${user address}
     Wait Until Page Contains Element  css=#new_header_address_search
     Wait And Click  css=#open_new_popup_map
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
@@ -81,12 +84,12 @@ Check The Cart
 Add Product To The Cart
     User Choose The Restaraunt
     User Choose the Product
-    User Confirm Adress To Delivery
+    User Confirm Adress To Delivery  Беларусь, Минск, проспект Независимости, 58
     User Choose The Restaraunt
     User Choose the Product
     User Choose The Additinal Items
     User Choose Size Of The Portion
-    User Choose Number Of Portion
+    User Choose Number Of The Portion
     User Add Product To The Cart
 Confirm Order
     Wait And Click  css=.order
@@ -109,7 +112,7 @@ Create Account
     Wait And Click  css=#submitOrder
 Sign In
     [Arguments]  ${user email}  ${user password}
-    Wait And Click  css=.new_header_islogined
+    Wait And Click  css=.new_header_top_block_reg_login
     Wait Until Page Contains Element  css=#user_email
     Input Text  css=#user_email  ${user email}
     Wait Until Page Contains Element  css=#user_password
