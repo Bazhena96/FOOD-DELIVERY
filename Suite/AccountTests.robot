@@ -13,7 +13,7 @@ User choose the language settings
     Close Browser
 User create account
     Load Page And Maximize Browser Window
-    Create Account
+    Create Account  Bazhena  Беларусь, Минск, проспект Независимости, 58  +375255433153  bazhenkak@gmail.com  123456789
     Close Browser
 User sign in
     Load Page And Maximize Browser Window
