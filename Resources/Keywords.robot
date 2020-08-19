@@ -31,10 +31,11 @@ Choose Adress To Delivery
     Click Element  css=#new_address_form_delivery
 Choose Adress To Delivery In The Map
     [Arguments]  ${user address}
-    Wait Until Page Contains Element  css=#new_header_address_search
+    Wait Until Page Contains Element  css=#open_new_popup_map
     Wait And Click  css=#open_new_popup_map
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
     Input Text  css=#new_header_address_search_under_map  ${user address}
+    Wait And Click  css=
     Wait And Click  css=#map_set_address_button
 Verify That Adress To Delivery Added
     Wait And Click  css=.first
