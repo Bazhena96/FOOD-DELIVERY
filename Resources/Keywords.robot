@@ -35,7 +35,6 @@ Choose Adress To Delivery In The Map
     Wait And Click  css=#open_new_popup_map
     Wait Until Page Contains Element  css=#new_header_address_search_under_map
     Input Text  css=#new_header_address_search_under_map  ${user address}
-    Wait And Click  css=
     Wait And Click  css=#map_set_address_button
 Verify That Adress To Delivery Added
     Wait Until Page Contains Element  css=.first
@@ -54,6 +53,7 @@ Verify That Search Completed
     Wait And Click  ${search term}
 User Choose The Restaraunt
     [Documentation]  Restaraunt: Pizza Lisitca
+    Wait And Click  css=#filterForm > div.rest_open_info_block.fl > div > a.last
     Wait And Click  css=div.item:nth-child(1) > div:nth-child(3) > a:nth-child(1)
 User Choose the Product
     [Documentation]  Product: pizza
@@ -84,7 +84,7 @@ Check The Cart
 Add Product To The Cart
     User Choose The Restaraunt
     User Choose the Product
-    User Confirm Adress To Delivery  Беларусь, Минск, проспект Независимости, 58
+    User Confirm Adress To Delivery  Минск, улица Гинтовта, 18
     User Choose The Restaraunt
     User Choose the Product
     User Choose The Additinal Items
@@ -95,7 +95,7 @@ Confirm Order
     Wait And Click  css=#order_block_sidebar > input
     Wait Until Page Contains Element  css=#switchQuickForm
 Delite Order
-    Wait And Click  css=#closeBasket
+    Wait And Click  id=closeBasket
     Wait Until Page Contains  Ваша корзина пуста
 Create Account
     [Arguments]  ${user name}  ${user address}  ${phone number}  ${user email}  ${user password}
