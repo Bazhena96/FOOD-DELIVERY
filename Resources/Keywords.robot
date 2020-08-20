@@ -23,7 +23,7 @@ Verify That Language Settings Changed
 Sort By Rating
     Wait and Click  css=#sortingItems > label:nth-child(8) > a:nth-child(2)
 Choose The Cuisine
-    Wait And Click   css=div.left-column:nth-child(2) > div:nth-child(3) > label:nth-child(72) > a:nth-child(2)
+    Wait And Click   css=#filterByTypeForm > div:nth-child(2) > div.left-column-inner > label:nth-child(72) > a
 Choose Adress To Delivery
     [Arguments]  ${user address}
     Wait Until Page Contains Element  css=#new_header_address_search
@@ -38,7 +38,7 @@ Choose Adress To Delivery In The Map
     Wait And Click  css=
     Wait And Click  css=#map_set_address_button
 Verify That Adress To Delivery Added
-    Wait And Click  css=.first
+    Wait Until Page Contains Element  css=.first
 Search The Dish
     [Arguments]  ${dish}
     Wait And Click  css=.left_block_seach_form_input
@@ -80,7 +80,7 @@ User Add Product To The Cart
     Wait And Click  css=#opts-save
 Check The Cart 
     Scroll Element Into View  css=#shopping-cart-icon
-    Wait Until Page Contains Element  css=#mainCntent > div > div.page-container > div > input
+    Wait And Click  css=#shopping-cart-icon
 Add Product To The Cart
     User Choose The Restaraunt
     User Choose the Product
@@ -95,9 +95,8 @@ Confirm Order
     Wait And Click  css=#order_block_sidebar > input
     Wait Until Page Contains Element  css=#switchQuickForm
 Delite Order
-    Wait And Click  css=#total-products-count
     Wait And Click  css=#closeBasket
-    Wait Until Page Contains  Your cart is empty
+    Wait Until Page Contains  Ваша корзина пуста
 Create Account
     [Arguments]  ${user name}  ${user address}  ${phone number}  ${user email}  ${user password}
     Wait And Click  css=.new_header_top_block_reg_login
