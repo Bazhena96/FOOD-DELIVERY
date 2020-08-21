@@ -19,11 +19,11 @@ User sign in
     Load Page And Maximize Browser Window
     Sign In  bazhenkak@gmail.com  123456789
     Close Browser
-#User sign out
-#    Load Page And Maximize Browser Window
-#    Sign In   bazhenkak@gmail.com  123456789
-#    Sign Out
-#    Close Browser
+User sign out
+    Load Page And Maximize Browser Window
+    Sign In  bazhenkak@gmail.com  123456789
+    Sign Out
+    Close Browser
 User choose adress to delivery
     Load Page And Maximize Browser Window
     Choose Adress To Delivery  Минск, улица Гинтовта, 18
